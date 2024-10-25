@@ -3,6 +3,7 @@
 import { cn } from "@/lib/utils"
 import pagePaths from "@/utils/pagePaths"
 import axios from "axios"
+import { TrainFront } from "lucide-react"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 import { useEffect } from "react"
@@ -25,8 +26,8 @@ function NavBar() {
 
     return (
         <div className="flex flex-row w-full h-[70px] bg-slate-100 items-center justify-between p-3 relative ">
-            <div className=" bg-white size-10">
-
+            <div className=" bg-transparent size-10 pl-3">
+                <TrainFront size={40} />
             </div>
             <div className="flex flex-row gap-5 h-fit">
                 <Link href={pagePaths.queryTrain} className={cn(' text-white font-semibold text-lg w-fit h-fit px-3 py-1 shadow-lg rounded-2xl transition-all duration-300 ease-in-out', pathname.includes('queryTrain') ? 'bg-red-500 ' : 'hover:translate-y-2  text-gray-800 bg-white')}>

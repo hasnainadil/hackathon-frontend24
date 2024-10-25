@@ -10,6 +10,7 @@ import { useState } from "react"
 import { toast } from "sonner"
 import { PiSeatFill } from "react-icons/pi";
 import { Separator } from "@/components/ui/separator"
+import axios from "axios"
 
 // trainId: train.id,
 // trainName: train.name,
@@ -252,6 +253,13 @@ function TrainCard({ trains }) {
     const firstClass = trains?.seats.filter(seat => seat.class === "First Class")
     const secondClass = trains?.seats.filter(seat => seat.class === "Second Class")
     const thirdClass = trains?.seats.filter(seat => seat.class === "Third Class")
+
+    const requestOtp = async () => {
+        if(!localStorage.getItem("userId")) return toast.error("Please login first")
+        // axios.post("https://api.prod.pinklifeline.xyz/authentication/main/v1/otp/sent", {
+        //     id :
+        // })
+    }
 
     if (trains.seats.length === 0) return <div className="w-full h-32 bg-white rounded-2xl shadow-lg p-5">No trains available</div>
     return (

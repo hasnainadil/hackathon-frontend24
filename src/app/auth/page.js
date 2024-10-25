@@ -193,7 +193,7 @@ function LoginSection({ setCurrentSection }) {
                 {loading ? <Loader className="animate-spin" size={20} /> : "Login"}
             </button>
             <div className="flex flex-row gap-7 justify-center w-64">
-                <div className="text-white">Don't have an account?</div>
+                <div className="text-white">Don&apos;t have an account?</div>
                 <button className="text-white hover:underline" onClick={() => { setCurrentSection("register") }} >
                     Register
                 </button>
